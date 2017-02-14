@@ -1,0 +1,281 @@
+file 14944 1479480333                                           
+version 2
+run Wireless03-0-20161118-20:14:32-3464
+attr configname Wireless03
+attr datetime 20161118-20:14:32
+attr experiment Wireless03
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network WirelessB
+attr processid 3464
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.host*.**.bitrate 1Mbps
+param *.host*.networkLayer.arpType "\"GlobalARP\""
+param *.host*.wlan[0].mac.fullDuplex false
+param *.host*.wlan[0].mac.useAck false
+param *.host*.wlan[0].radio.receiver.ignoreInterference true
+param *.host*.wlan[0].radio.transmitter.communicationRange 250m
+param *.host*.wlan[0].typename "\"IdealWirelessNic\""
+param *.hostA.numUdpApps 1
+param *.hostA.udpApp[0].destAddresses "\"hostB\""
+param *.hostA.udpApp[0].destPort 5000
+param *.hostA.udpApp[0].messageLength 1000B
+param *.hostA.udpApp[0].packetName "\"UDPData\""
+param *.hostA.udpApp[0].sendInterval exponential(12ms)
+param *.hostA.udpApp[0].typename "\"UDPBasicApp\""
+param *.hostA.wlan[0].radio.displayCommunicationRange true
+param *.hostB.numUdpApps 1
+param *.hostB.udpApp[0].localPort 5000
+param *.hostB.udpApp[0].typename "\"UDPSink\""
+param *.hostR1.wlan[0].radio.displayCommunicationRange true
+param *.visualizer.mediumVisualizer.displaySignals true
+param *.visualizer.mediumVisualizer.signalPropagationUpdateInterval 100ns
+param *.visualizer.physicalLinkVisualizer.packetNameFilter "\"UDPData*\""
+param *.visualizer.sceneVisualizer.descriptionFigure "\"title\""
+
+vector 15  WirelessB.hostA.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 38  WirelessB.hostB.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 53  WirelessB.hostR1.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 68  WirelessB.hostR2.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 83  WirelessB.hostR3.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 98  WirelessB.hostR4.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 113  WirelessB.hostR5.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 128  WirelessB.hostR6.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 21  WirelessB.hostA.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 44  WirelessB.hostB.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 59  WirelessB.hostR1.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 74  WirelessB.hostR2.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 89  WirelessB.hostR3.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 104  WirelessB.hostR4.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 119  WirelessB.hostR5.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 134  WirelessB.hostR6.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 22  WirelessB.hostA.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 45  WirelessB.hostB.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 60  WirelessB.hostR1.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 75  WirelessB.hostR2.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 90  WirelessB.hostR3.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 105  WirelessB.hostR4.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 120  WirelessB.hostR5.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 135  WirelessB.hostR6.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 1  WirelessB.hostA.udpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 4  WirelessB.hostA.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 12  WirelessB.hostA.wlan[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 14  WirelessB.hostA.wlan[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 18  WirelessB.hostA.wlan[0].mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 23  WirelessB.hostA.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 17  WirelessB.hostA.wlan[0].mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 102  WirelessB.hostR4.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 103  WirelessB.hostR4.wlan[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 72  WirelessB.hostR2.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 73  WirelessB.hostR2.wlan[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 57  WirelessB.hostR1.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 58  WirelessB.hostR1.wlan[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 132  WirelessB.hostR6.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 133  WirelessB.hostR6.wlan[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 117  WirelessB.hostR5.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 118  WirelessB.hostR5.wlan[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 42  WirelessB.hostB.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 39  WirelessB.hostB.wlan[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 28  WirelessB.hostB.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 29  WirelessB.hostB.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+vector 24  WirelessB.hostB.udpApp[0]  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 25  WirelessB.hostB.udpApp[0]  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 26  WirelessB.hostB.udpApp[0]  rcvdPkSeqNo:vector  ETV
+attr interpolationmode  none
+attr source  appPkSeqNo(rcvdPk)
+attr title  "received packet sequence number, vector"
+vector 87  WirelessB.hostR3.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 88  WirelessB.hostR3.wlan[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+1	10630 134 22 153 0.022315250545 0.055717563215 5 1000 1000 5000 5000000
+4	10764 134 24 154 0.022315250545 0.055717563215 5 1008 1008 5040 5080320
+12	10898 139 26 156 0.022315250545 0.055717563215 5 1028 1028 5140 5283920
+14	11037 125 26 211 0.022315250545 0.069942299575 4 0 0.014469843421 0.021809619155 0.00026324867645367
+15	11162 135 0 211 0 0.069942299575 6 0 3 9 19
+17	11297 111 27 213 0.022315250545 0.069942299575 4 1028 1028 4112 4227136
+18	11408 111 27 213 0.022315250545 0.069942299575 4 1028 1028 4112 4227136
+21	11519 193 0 213 0 0.069942299575 9 0 3 20 52
+22	11712 183 0 213 0 0.069942299575 8 0 1 4 4
+23	11895 346 27 214 0.022315250545 0.069942299575 14 0 2 15 23
+24	12241 55 90 195 0.030540584801 0.061719633831 2 1000 1000 2000 2000000
+25	12296 75 90 195 0.030540584801 0.061719633831 2 0.008225334256 0.008225334256 0.016450668512 0.00013531224724585
+26	12371 49 90 195 0.030540584801 0.061719633831 2 0 1 1 1
+28	12420 55 89 194 0.030540584801 0.061719633831 2 1008 1008 2016 2032128
+29	12475 49 89 194 0.030540584801 0.061719633831 2 1 2 3 5
+38	12524 10 0 0 0 0 1 0 0 0 0
+39	12534 55 87 192 0.030540584801 0.061719633831 2 1028 1028 2056 2113568
+42	12589 55 87 192 0.030540584801 0.061719633831 2 1028 1028 2056 2113568
+44	12644 20 0 0 0 0 2 0 2 2 4
+45	12664 133 0 191 0 0.061719633831 6 1 3 13 33
+53	12797 10 0 0 0 0 1 0 0 0 0
+57	12807 83 73 228 0.030539775058 0.069942824088 3 1028 1028 3084 3170352
+58	12890 83 73 228 0.030539775058 0.069942824088 3 1028 1028 3084 3170352
+59	12973 20 0 0 0 0 2 0 2 2 4
+60	12993 183 0 227 0 0.069942824088 8 1 3 18 46
+68	13176 10 0 0 0 0 1 0 0 0 0
+72	13186 83 70 224 0.030539685478 0.069942734508 3 1028 1028 3084 3170352
+73	13269 83 70 224 0.030539685478 0.069942734508 3 1028 1028 3084 3170352
+74	13352 20 0 0 0 0 2 0 2 2 4
+75	13372 183 0 223 0 0.069942734508 8 1 3 18 46
+83	13555 10 0 0 0 0 1 0 0 0 0
+87	13565 55 94 200 0.030540663383 0.061719712413 2 1028 1028 2056 2113568
+88	13620 55 94 200 0.030540663383 0.061719712413 2 1028 1028 2056 2113568
+89	13675 20 0 0 0 0 2 0 2 2 4
+90	13695 133 0 198 0 0.061719712413 6 1 3 13 33
+98	13828 10 0 0 0 0 1 0 0 0 0
+102	13838 86 68 221 0.030539668364 0.069942717394 3 1028 1028 3084 3170352
+103	13924 86 68 221 0.030539668364 0.069942717394 3 1028 1028 3084 3170352
+104	14010 22 0 0 0 0 2 0 2 2 4
+105	14032 191 0 220 0 0.069942717394 8 1 3 18 46
+113	14223 11 0 0 0 0 1 0 0 0 0
+117	14234 57 84 188 0.030540487771 0.061719536801 2 1028 1028 2056 2113568
+118	14291 57 84 188 0.030540487771 0.061719536801 2 1028 1028 2056 2113568
+119	14348 22 0 0 0 0 2 0 2 2 4
+120	14370 191 0 240 0 0.069943536801 8 1 3 18 46
+128	14561 11 0 0 0 0 1 0 0 0 0
+132	14572 83 79 235 0.03054017288 0.06994322191 3 1028 1028 3084 3170352
+133	14655 83 79 235 0.03054017288 0.06994322191 3 1028 1028 3084 3170352
+134	14738 22 0 0 0 0 2 0 2 2 4
+135	14760 184 0 234 0 0.06994322191 8 1 3 18 46
